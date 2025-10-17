@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In - NU Laguna Online Library</title>
+  <link rel="icon" type="image/png" href="/images/user/NULOGO.png">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="signin-container">
+    <div class="logo-header">
+          <img src="/images/user/NULOGO.png" height="50px"><h1>NU Laguna <br> Online Library</h1>
+          
+    </div>
+    <p class="subtitle">Continue As...</p>
+    <div class="user-container">
+      <div class="user">
+        <a href="/menu.html"  onclick="setUser('Dean')">
+          <img src="/images/user/Dean.jpg"  alt="Dean">
+        </a>
+        <p>Dean</p>
+      </div>
+
+      <div class="user">
+        <a href="/menu.html" onclick="setUser('Peneil')">
+          <img src="/images/user/Pen.jpg" alt="Peneil">
+        </a>
+        <p>Peneil</p>
+      </div>
+
+      <div class="user">
+        <a href="/menu.html" onclick="setUser('Heurie')">
+          <img src="/images/user/heurie.jpg" alt="Heurie">
+        </a>
+                <p>Heurie</p>
+      </div>
+    </div>
+
+    <a href="#" class="create-account">Create Account</a>
+  </div>
+  <script>
+    // Save the selected user in localStorage
+    function setUser(name) {
+      localStorage.setItem("currentUser", name);
+    }
+  </script>
+</body>
+</html>
+

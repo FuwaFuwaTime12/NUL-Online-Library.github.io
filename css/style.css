@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #2D3967;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+body.fade-in {
+  opacity: 1;
+}
+.signin-container {
+  background-color: #ffffff;
+  width: 580px;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.signin-container h1 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000;
+  margin-left: 5px;
+  margin-left: 10px;
+}
+.logo-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 190px;
+  bottom: 20px;
+  margin-bottom: 5px;
+  text-align: justify;
+  line-height: 1.3rem;
+}
+.subtitle {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.user-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 25px;
+}
+
+.user img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease;
+}
+
+.user img:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+}
+
+.user p {
+  margin-top: 8px;
+  font-weight: 500;
+  color: #000;
+}
+
+.create-account {
+  display: inline-block;
+  color: #000;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
+.create-account:hover {
+  color: #2D3967;
+}

@@ -1,0 +1,461 @@
+/* ==========================================================
+   NU LAGUNA ONLINE LIBRARY — Payments Page
+   Cleaned, Formatted, and Optimized (No Design Changes)
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   Global Reset
+---------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ----------------------------------------------------------
+   Body
+---------------------------------------------------------- */
+body {
+  background-color: #2D3967;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 2em 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
+/* ----------------------------------------------------------
+   Main Container
+---------------------------------------------------------- */
+.main-container {
+  background-color: #ffffff;
+  padding: 2em 3em;
+  border-radius: 25px;
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.4);
+  width: 80%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ----------------------------------------------------------
+   Header
+---------------------------------------------------------- */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+  position: relative;
+}
+
+.header a {
+  position: absolute;
+  right: 20.5em;
+  bottom: 1em;
+  font-size: 28px;
+  color: #2D3967;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.header a:hover {
+  transform: scale(1.1);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #000;
+}
+
+/* ----------------------------------------------------------
+   Payment Entries
+---------------------------------------------------------- */
+.parent-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  width: 100%;
+}
+
+.child-container {
+  display: grid;
+  grid-template-columns: 120px 1fr 180px;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 1.2em;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.child-container:hover {
+  transform: scale(1.02);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.book-container img {
+  width: 100px;
+  height: 140px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.bookinfo-container h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.bookinfo-container p {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* ----------------------------------------------------------
+   Payment Status
+---------------------------------------------------------- */
+.state,
+.state2 {
+  margin-top: 8px;
+  padding: 5px 15px;
+  border-radius: 25px;
+  width: fit-content;
+  font-weight: 600;
+  font-size: 13px;
+  color: white;
+  text-align: center;
+}
+
+.state {
+  background-color: #E2C876;
+}
+
+.state2 {
+  background-color: rgb(180, 179, 179);
+}
+
+/* ----------------------------------------------------------
+   Balance Info & Actions
+---------------------------------------------------------- */
+.balance-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.balance-container h2 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.balance-container h1 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2D3967;
+}
+
+/* ----------------------------------------------------------
+   Payment Buttons
+---------------------------------------------------------- */
+.pay-btn {
+  background-color: #2D3967;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  margin-top: 8px;
+}
+
+.pay-btn:hover {
+  background-color: #E2C876;
+  color: #2D3967;
+  transform: scale(1.05);
+}
+
+.remove-btn {
+  background-color: #B23B3B;
+  color: white;
+  font-size: 13px;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.remove-btn:hover {
+  background-color: #902d2d;
+  transform: scale(1.05);
+}
+
+/* ----------------------------------------------------------
+   Pay Balance Button
+---------------------------------------------------------- */
+.pay-balance-btn {
+  background-color: #E2C876;
+  color: #2D3967;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 15px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.pay-balance-btn:hover {
+  background-color: #d4b85f;
+  transform: scale(1.05);
+}
+
+/* ----------------------------------------------------------
+   Replace Lost Book Button
+---------------------------------------------------------- */
+.lost-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.replace-btn {
+  background-color: #2D3967;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.replace-btn:hover {
+  background-color: #E2C876;
+  color: #2D3967;
+  transform: scale(1.05);
+}
+
+/* ----------------------------------------------------------
+   Remove All Paid Books
+---------------------------------------------------------- */
+.remove-all-container {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.remove-all-btn {
+  background-color: #E2C876;
+  color: #2D3967;
+  font-weight: 600;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.remove-all-btn:hover {
+  background-color: #d4b85f;
+  transform: scale(1.05);
+}
+
+/* ----------------------------------------------------------
+   Navigation Bar
+---------------------------------------------------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c2340;
+  color: white;
+  padding: 12px 30px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 0 0 10px 10px;
+}
+
+.nav-left h2 {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-right a {
+  color: #ffd66b;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-right a:hover {
+  color: white;
+}
+
+#userDisplay {
+  font-weight: 500;
+  color: #f0f0f0;
+}
+
+/* ----------------------------------------------------------
+   User Profile (Top Right Corner)
+---------------------------------------------------------- */
+.user-profile {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  background-color: #ffffff;
+  padding: 6px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+}
+
+.user-profile img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #2d3967;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.user-profile img:hover {
+  transform: scale(1.05);
+}
+
+/* ----------------------------------------------------------
+   Profile Inside Main Container
+---------------------------------------------------------- */
+.profile-container {
+  position: absolute;
+  top: 45px;
+  right: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  border: 3px solid #2d3967;
+  z-index: 20;
+}
+
+.profile-container img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.profile-container img:hover {
+  transform: scale(1.08);
+}
+
+/* ==========================================================
+   Payment History Styles
+========================================================== */
+.history-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.view-history-btn {
+  background-color: #2D3967;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.view-history-btn:hover {
+  background-color: #1c2340;
+  transform: scale(1.05);
+}
+
+#archivedPaymentsContainer {
+  margin-top: 20px;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  padding-top: 10px;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+#archivedPaymentsContainer h3 {
+  color: #2D3967;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.archived-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.archived-item img {
+  width: 70px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #2D3967;
+}
+
+.archived-info h4 {
+  color: #2D3967;
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+.archived-info p {
+  font-size: 13px;
+  margin: 2px 0;
+}
+
+.no-history {
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+}
+
+.hidden {
+  display: none;
+}

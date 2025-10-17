@@ -1,0 +1,189 @@
+/* ==========================================================
+   GLOBAL STYLES
+   ========================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2D3967;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+body.fade-in {
+  opacity: 1;
+}
+/* ==========================================================
+   MAIN CONTAINER
+   ========================================================== */
+.main-container {
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding: 2.5em 3em;
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.4);
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+.header h1 {
+  text-align: justify;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.3;
+  color: #000000;
+  margin-bottom: 35px;
+}
+.logo-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 200px;
+  bottom: 30px;
+}
+.logo-header h1{
+  position: relative;
+  top: 17px;
+  left: 5px;
+}
+
+/* ==========================================================
+   BUTTON GRID LAYOUT
+   ========================================================== */
+.main-button ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 40px;
+  justify-items: center;
+  padding: 0;
+}
+
+.main-button li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==========================================================
+   MAIN BUTTONS
+   ========================================================== */
+.main-button button {
+  background-color: #D7BB6A;
+  color: #2D3967;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  border-radius: 18px;
+  width: 220px;
+  height: 60px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.main-button button:hover {
+  transform: scale(1.04);
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================================
+   BACK BUTTON
+   ========================================================== */
+.back-btn {
+  background-color: #d3d3d3;
+  color: #000;
+  transition: background-color 0.2s ease;
+}
+
+.back-btn:hover {
+  background-color: #bdbdbd;
+}
+
+/* ==========================================================
+   USER PROFILE (TOP RIGHT)
+   ========================================================== */
+.profile-container {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  border: 3px solid #2D3967;
+  z-index: 20;
+}
+
+.profile-container img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.profile-container img:hover {
+  transform: scale(1.08);
+}
+
+/* ==========================================================
+   OPTIONAL NAVBAR (for future use)
+   ========================================================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c2340;
+  color: white;
+  padding: 12px 30px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 0 0 10px 10px;
+}
+
+.nav-left h2 {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-right a {
+  color: #ffd66b;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-right a:hover {
+  color: white;
+}
+
+#userDisplay {
+  font-weight: 500;
+  color: #f0f0f0;
+}
